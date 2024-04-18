@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 100vw;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: whitesmoke;
+}
+.item .image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+.item {
+  width: 300px;
+  box-shadow: 1px 1px 1px;
+  padding: 9px;
+  margin: 6px;
+  background-color: beige;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+input {
+  margin-right: 18px;
+  padding: 9px;
+  border-radius: 5px;
+  border: none;
+}
+input:focus {
+  outline: none;
+}
+.input {
+  background-color: blue;
+  width: 100%;
+  padding: 12px;
+  text-align: end;
+}
+.item-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 28px;
+  margin-top: 36px;
+}
+.item-Name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.item-Name p {
+  background-color: violet;
+  color: white;
+  padding: 3px 9px;
+  border-radius: 3px;
+}
+.price {
+  font-weight: bolder;
+}
