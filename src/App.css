@@ -1,11 +1,5 @@
-body {
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .container {
-  width: 100vw;
+  width: 100%;
   margin: 0;
   box-sizing: border-box;
   background-color: whitesmoke;
@@ -40,6 +34,7 @@ input:focus {
   width: 100%;
   padding: 12px;
   text-align: end;
+  box-sizing: border-box;
 }
 .item-container {
   display: flex;
