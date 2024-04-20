@@ -1,15 +1,12 @@
 import React from "react";
 import product from "./product";
 import Product from "./Product.jsx";
+import { FilterProducts } from "../utills/Filter.js";
 export default function Products({ search }) {
-  const liveProduct = product.filter((item) =>
-    search.toLowerCase() === ""
-      ? true
-      : item.name.toLocaleLowerCase().includes(search)
-  );
+  const liveProducts = FilterProducts(search, product);
   return (
     <div className="items-container">
-      {liveProduct.map((item, idx) => {
+      {liveProducts.map((item, idx) => {
         return (
           <div key={idx}>
             <Product item={item} />
