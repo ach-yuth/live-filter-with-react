@@ -11,7 +11,7 @@ export default function Products({ search }) {
     <div className="items-container">
       {liveProduct.map((item, idx) => {
         return (
-          <div className="item" key={idx}>
+          <div key={idx}>
             <Product item={item} />
           </div>
         );
