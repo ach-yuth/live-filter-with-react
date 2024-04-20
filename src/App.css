@@ -1,27 +1,32 @@
-.container {
-  width: 100%;
+* {
   margin: 0;
-  box-sizing: border-box;
+  padding: 0;
+}
+body {
   background-color: whitesmoke;
 }
-.item .image {
+.container {
   width: 100%;
-  height: 300px;
+  background-color: whitesmoke;
+}
+.image {
+  width: 100%;
+  height: 200px;
   object-fit: cover;
   object-position: center;
 }
 .item {
   width: 300px;
-  box-shadow: 1px 1px 1px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px;
   padding: 9px;
   margin: 6px;
   background-color: beige;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  border-radius: 9px;
 }
 input {
-  margin-right: 18px;
   padding: 9px;
   border-radius: 5px;
   border: none;
@@ -29,31 +34,50 @@ input {
 input:focus {
   outline: none;
 }
-.input {
-  background-color: blue;
+.header {
+  background-color: rgb(95, 95, 243);
   width: 100%;
   padding: 12px;
-  text-align: end;
+  display: flex;
+  justify-content: space-between;
   box-sizing: border-box;
 }
-.item-container {
+.header h2 {
+  color: white;
+}
+.items-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   gap: 28px;
   margin-top: 36px;
 }
-.item-Name {
+.item-description {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 18px;
+  padding: 0.8rem;
 }
-.item-Name p {
-  background-color: violet;
+.item-description span {
+  background-color: rgb(231, 142, 231);
   color: white;
   padding: 3px 9px;
   border-radius: 3px;
+  margin-left: 6px;
 }
 .price {
   font-weight: bolder;
+  font-size: 1.5rem;
+}
+.cart-btn {
+  background-color: rgb(94, 94, 240);
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 3px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+.cart-btn:hover {
+  background-color: rgb(53, 53, 202);
 }

@@ -1,0 +1,7 @@
+export function filterProduct(search, product) {
+  product.filter((item) =>
+    search.toLowerCase() === ""
+      ? true
+      : item.name.toLocaleLowerCase().includes(search)
+  );
+}

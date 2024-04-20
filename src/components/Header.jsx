@@ -2,7 +2,8 @@ import React, { useState } from "react";
 
 export default function Header({ setSearch }) {
   return (
-    <div className="input">
+    <div className="header">
+      <h2>ShopElectronic</h2>
       <input
         type="text"
         placeholder="search"
