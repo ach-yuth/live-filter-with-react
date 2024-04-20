@@ -1,9 +1,9 @@
 import React from "react";
-import product from "./product";
+import products from "./products";
 import Product from "./Product.jsx";
 import { FilterProducts } from "../utills/Filter.js";
 export default function Products({ search }) {
-  const liveProducts = FilterProducts(search, product);
+  const liveProducts = FilterProducts(search, products);
   return (
     <div className="items-container">
       {liveProducts.map((item, idx) => {
