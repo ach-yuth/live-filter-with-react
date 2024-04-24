@@ -40,6 +40,7 @@ input:focus {
   padding: 12px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   box-sizing: border-box;
 }
 .header h2 {
@@ -80,4 +81,30 @@ input:focus {
 }
 .cart-btn:hover {
   background-color: rgb(53, 53, 202);
+}
+.cart-icon img {
+  width: 30px;
+  height: 30px;
+}
+.cart-icon {
+  position: relative;
+  background-color: aliceblue;
+  width: 40px;
+  height: 40px;
+  border-radius: 3px;
+}
+.cart-icon p {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: white;
+  background-color: rgb(231, 142, 231);
+  padding: 1px 3px;
+  font-weight: bolder;
+}
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
 }

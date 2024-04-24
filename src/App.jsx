@@ -6,11 +6,12 @@ import Header from "./components/Header";
 
 export default function App() {
   const [search, setSearch] = useState("");
+  const [count, setCount] = useState(0);
 
   return (
     <div className="container">
-      <Header setSearch={setSearch} />
-      <Products search={search} />
+      <Header setSearch={setSearch} count={count} />
+      <Products search={search} setCount={setCount} />
     </div>
   );
 }

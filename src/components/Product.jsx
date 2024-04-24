@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Product({ item }) {
+export default function Product({ item, setCount }) {
   return (
     <div className="item">
       <img className="image" src={item.image} />
@@ -11,7 +11,14 @@ export default function Product({ item }) {
           Rating:<span>{item.rating}</span>
         </p>
         <p className="price"> $ {item.price}</p>
-        <button className="cart-btn">Add To Cart</button>
+        <button
+          onClick={() => {
+            setCount((prev) => prev + 1);
+          }}
+          className="cart-btn"
+        >
+          Add To Cart
+        </button>
       </div>
     </div>
   );
