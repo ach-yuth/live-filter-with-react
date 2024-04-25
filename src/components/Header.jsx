@@ -1,6 +1,8 @@
-import React, { useState } from "react";
-
-export default function Header({ setSearch, count }) {
+import { useState } from "react";
+import cart from "../../assets/shopping-cart.png";
+import Cartdisplay from "./Cartdisplay";
+export default function Header({ setSearch, count, CartItems }) {
+  const [displayProduct, setDisplayProduct] = useState(false);
   return (
     <div className="header">
       <h2>ShopElectronic</h2>
@@ -12,9 +14,15 @@ export default function Header({ setSearch, count }) {
             setSearch(e.target.value);
           }}
         />
-        <div className="cart-icon">
-          <img src="https://cdn-icons-png.flaticon.com/128/891/891407.png"></img>
-          <p>{count}</p>
+        <div
+          className="cart-icon"
+          onClick={() => {
+            setDisplayProduct((prev) => !prev);
+          }}
+        >
+          {displayProduct && <Cartdisplay CartItems={CartItems} />}
+          <img src={cart}></img>
+          <p className="cart-count">{count}</p>
         </div>
       </div>
     </div>

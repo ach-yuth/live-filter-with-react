@@ -88,23 +88,37 @@ input:focus {
 }
 .cart-icon {
   position: relative;
-  background-color: aliceblue;
   width: 40px;
   height: 40px;
   border-radius: 3px;
 }
-.cart-icon p {
+.cart-count {
   position: absolute;
-  right: 0;
+  right: -8px;
   bottom: 0;
   color: white;
   background-color: rgb(231, 142, 231);
-  padding: 1px 3px;
-  font-weight: bolder;
+  width: 15px;
+  height: 15px;
+  padding: 2px;
+  text-align: center;
+  line-height: 15px;
+  border-radius: 50%;
 }
 .search {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 12px;
+}
+.card-display {
+  position: absolute;
+  background-color: bisque;
+  width: 240px;
+  top: 42px;
+  bottom: 0;
+  right: 0;
+  max-height: 500px;
+  overflow-y: scroll;
+  padding: 10px;
 }
