@@ -1,8 +1,10 @@
 import { useState } from "react";
 import cart from "../../assets/shopping-cart.png";
 import Cartdisplay from "./Cartdisplay";
-export default function Header({ setSearch, count, CartItems }) {
+export default function Header({ setSearch, CartItems, setCartItems }) {
   const [displayProduct, setDisplayProduct] = useState(false);
+
+  const count = CartItems.reduce((tot, curr) => tot + curr.count, 0);
   return (
     <div className="header">
       <h2>ShopElectronic</h2>
@@ -20,7 +22,9 @@ export default function Header({ setSearch, count, CartItems }) {
             setDisplayProduct((prev) => !prev);
           }}
         >
-          {displayProduct && <Cartdisplay CartItems={CartItems} />}
+          {displayProduct && (
+            <Cartdisplay CartItems={CartItems} setCartItems={setCartItems} />
+          )}
           <img src={cart}></img>
           <p className="cart-count">{count}</p>
         </div>

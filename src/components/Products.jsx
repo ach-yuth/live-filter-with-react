@@ -1,12 +1,7 @@
 import products from "../components/../data/products";
 import Product from "./Product.jsx";
 import { FilterProducts } from "../utills/Filter.js";
-export default function Products({
-  search,
-  setCount,
-  CartItems,
-  setCartItems,
-}) {
+export default function Products({ search, CartItems, setCartItems }) {
   const liveProducts = FilterProducts(search, products);
   return (
     <div className="items-container">
@@ -15,7 +10,6 @@ export default function Products({
           <div key={idx}>
             <Product
               item={item}
-              setCount={setCount}
               CartItems={CartItems}
               setCartItems={setCartItems}
             />

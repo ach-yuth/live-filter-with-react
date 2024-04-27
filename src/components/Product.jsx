@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Product({ item, setCount, CartItems, setCartItems }) {
+export default function Product({ item, CartItems, setCartItems }) {
   return (
     <div className="item">
       <img className="image" src={item.image} />
@@ -17,7 +17,6 @@ export default function Product({ item, setCount, CartItems, setCartItems }) {
         <p className="price"> $ {item.price}</p>
         <button
           onClick={() => {
-            setCount((prev) => prev + 1);
             const itemAlreayInCart = CartItems.find(
               (el) => el._id === item._id
             );

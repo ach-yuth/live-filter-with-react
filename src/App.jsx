@@ -6,15 +6,17 @@ import Header from "./components/Header";
 
 export default function App() {
   const [search, setSearch] = useState("");
-  const [count, setCount] = useState(0);
   const [CartItems, setCartItems] = useState([]);
 
   return (
     <div className="container">
-      <Header setSearch={setSearch} count={count} CartItems={CartItems} />
+      <Header
+        setSearch={setSearch}
+        CartItems={CartItems}
+        setCartItems={setCartItems}
+      />
       <Products
         search={search}
-        setCount={setCount}
         setCartItems={setCartItems}
         CartItems={CartItems}
       />
