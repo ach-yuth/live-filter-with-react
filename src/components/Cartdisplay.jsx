@@ -1,5 +1,7 @@
 import React from "react";
-
+import DeleteButton from "./DeleteButton";
+import Increment from "./Increment";
+import Decrement from "./Decrement";
 export default function Cartdisplay({ CartItems, setCartItems }) {
   console.log(CartItems);
   return (
@@ -15,32 +17,29 @@ export default function Cartdisplay({ CartItems, setCartItems }) {
         CartItems.map((item, idx) => {
           return (
             <div className="items-container" key={idx}>
-              <p>{item.name}</p>
-              <p>{item.count}</p>
-              <button
-                onClick={() => {
-                  const itemAlreayInCart = CartItems.find(
-                    (el) => el._id === item._id
-                  );
-                  if (itemAlreayInCart.count === 0) {
-                    setCartItems((prev) => prev);
-                  } else {
-                    const prevItems = CartItems.filter(
-                      (el) => item._id !== el._id
-                    );
-                    setCartItems([
-                      ...prevItems,
-                      {
-                        ...itemAlreayInCart,
-                        count: itemAlreayInCart.count - 1,
-                      },
-                    ]);
-                  }
-                }}
-                className="cart-btn"
-              >
-                Add To Cart
-              </button>
+              <div className="product-name">
+                <img src={item.image}></img>
+                <p>{item.name.slice(0, 5)}...</p>
+              </div>
+              <div className="buttons-container">
+                <Decrement
+                  item={item}
+                  CartItems={CartItems}
+                  setCartItems={setCartItems}
+                />
+                <p>{item.count}</p>
+
+                <Increment
+                  item={item}
+                  CartItems={CartItems}
+                  setCartItems={setCartItems}
+                />
+                <DeleteButton
+                  item={item}
+                  CartItems={CartItems}
+                  setCartItems={setCartItems}
+                />
+              </div>
             </div>
           );
         })

@@ -128,3 +128,29 @@ input:focus {
   display: flex;
   justify-content: space-between;
 }
+.product-name {
+  display: flex;
+  align-items: center;
+}
+.buttons-container {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.product-name img {
+  width: 40px;
+  object-fit: cover;
+  object-position: center;
+}
+.green-btn {
+  background-color: rgb(93, 207, 93);
+  padding: 2px 4px;
+  cursor: pointer;
+  border: none;
+  color: white;
+  font-size: 1rem;
+}
+
+.green-btn:hover {
+  background-color: rgb(29, 209, 29);
+}
