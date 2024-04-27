@@ -16,10 +16,10 @@ export default function Cartdisplay({ CartItems, setCartItems }) {
       ) : (
         CartItems.map((item, idx) => {
           return (
-            <div className="items-container" key={idx}>
+            <div className="cart-item" key={idx}>
               <div className="product-name">
                 <img src={item.image}></img>
-                <p>{item.name.slice(0, 5)}...</p>
+                <p>{item.name.slice(0, 15)}...</p>
               </div>
               <div className="buttons-container">
                 <Decrement

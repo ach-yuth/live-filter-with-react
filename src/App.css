@@ -124,13 +124,14 @@ input:focus {
   padding: 10px;
   height: fit-content;
 }
-.items-container {
+.cart-item {
   display: flex;
   justify-content: space-between;
 }
 .product-name {
   display: flex;
   align-items: center;
+  gap: 9px;
 }
 .buttons-container {
   display: flex;

@@ -1,11 +1,8 @@
 import React from "react";
 
-export default function DeleteButton({ item, CartItems, setCartItems }) {
+export default function DeleteButton({ item, setCartItems }) {
   const clearItem = () => {
-    const itemAlreayInCart = CartItems.find((el) => el._id === item._id);
-    if (itemAlreayInCart.count === 1) {
-      setCartItems((prev) => prev.filter((el) => item._id !== el._id));
-    }
+    setCartItems((prev) => prev.filter((el) => item._id !== el._id));
   };
   return (
     <div>
