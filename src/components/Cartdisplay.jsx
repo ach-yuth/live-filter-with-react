@@ -2,8 +2,8 @@ import React from "react";
 import DeleteButton from "./DeleteButton";
 import Increment from "./Increment";
 import Decrement from "./Decrement";
+import Price from "./Price";
 export default function Cartdisplay({ CartItems, setCartItems }) {
-  console.log(CartItems);
   return (
     <div
       className="card-display"
@@ -44,6 +44,7 @@ export default function Cartdisplay({ CartItems, setCartItems }) {
           );
         })
       )}
+      <Price CartItems={CartItems} />
     </div>
   );
 }
