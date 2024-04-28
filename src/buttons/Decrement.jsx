@@ -6,13 +6,18 @@ export default function Decrement({ item, CartItems, setCartItems }) {
     if (itemAlreayInCart.count === 1) {
       setCartItems((prev) => prev.filter((el) => item._id !== el._id));
     } else {
-      setCartItems((prev) => [
-        ...prev.filter((el) => item._id !== el._id),
-        {
-          ...itemAlreayInCart,
-          count: itemAlreayInCart.count - 1,
-        },
-      ]);
+      setCartItems((prev) =>
+        prev.map((el) => {
+          if (el._id === item._id) {
+            return {
+              ...el,
+              count: el.count - 1,
+            };
+          } else {
+            return el;
+          }
+        })
+      );
     }
   };
   return (

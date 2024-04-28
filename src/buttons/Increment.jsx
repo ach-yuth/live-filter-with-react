@@ -1,17 +1,19 @@
 import React from "react";
 
-export default function Increment({ item, CartItems, setCartItems }) {
+export default function Increment({ item, setCartItems }) {
   const increment = () => {
-    const itemAlreayInCart = CartItems.find((el) => el._id === item._id);
-
-    const prevItems = CartItems.filter((el) => item._id !== el._id);
-    setCartItems([
-      ...prevItems,
-      {
-        ...itemAlreayInCart,
-        count: itemAlreayInCart.count + 1,
-      },
-    ]);
+    setCartItems((prev) =>
+      prev.map((el) => {
+        if (el._id === item._id) {
+          return {
+            ...el,
+            count: el.count + 1,
+          };
+        } else {
+          return el;
+        }
+      })
+    );
   };
   return (
     <div>
