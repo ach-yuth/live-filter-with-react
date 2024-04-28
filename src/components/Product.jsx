@@ -1,4 +1,5 @@
 import React from "react";
+import AddToCartButton from "../components/../buttons/AddToCartButton";
 
 export default function Product({ item, CartItems, setCartItems }) {
   return (
@@ -15,25 +16,11 @@ export default function Product({ item, CartItems, setCartItems }) {
           {item.name.length > 25 && "..."}
         </h3>
         <p className="price"> $ {item.price}</p>
-        <button
-          onClick={() => {
-            const itemAlreayInCart = CartItems.find(
-              (el) => el._id === item._id
-            );
-            if (!itemAlreayInCart) {
-              setCartItems((prev) => [...prev, { ...item, count: 1 }]);
-            } else {
-              const prevItems = CartItems.filter((el) => item._id !== el._id);
-              setCartItems([
-                ...prevItems,
-                { ...itemAlreayInCart, count: itemAlreayInCart.count + 1 },
-              ]);
-            }
-          }}
-          className="cart-btn"
-        >
-          Add To Cart
-        </button>
+        <AddToCartButton
+          item={item}
+          CartItems={CartItems}
+          setCartItems={setCartItems}
+        />
       </div>
     </div>
   );

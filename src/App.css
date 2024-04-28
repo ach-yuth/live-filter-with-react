@@ -78,6 +78,7 @@ input:focus {
   border-radius: 3px;
   font-weight: bolder;
   cursor: pointer;
+  width: 100%;
 }
 .cart-btn:hover {
   background-color: rgb(53, 53, 202);
@@ -157,4 +158,7 @@ input:focus {
 
 .green-btn:hover {
   background-color: rgb(29, 209, 29);
+}
+.price {
+  text-align: center;
 }

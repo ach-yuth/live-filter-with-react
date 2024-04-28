@@ -6,9 +6,8 @@ export default function Decrement({ item, CartItems, setCartItems }) {
     if (itemAlreayInCart.count === 1) {
       setCartItems((prev) => prev.filter((el) => item._id !== el._id));
     } else {
-      const prevItems = CartItems.filter((el) => item._id !== el._id);
-      setCartItems([
-        ...prevItems,
+      setCartItems((prev) => [
+        ...prev.filter((el) => item._id !== el._id),
         {
           ...itemAlreayInCart,
           count: itemAlreayInCart.count - 1,

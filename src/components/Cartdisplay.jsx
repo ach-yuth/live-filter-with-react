@@ -1,7 +1,7 @@
 import React from "react";
-import DeleteButton from "./DeleteButton";
-import Increment from "./Increment";
-import Decrement from "./Decrement";
+import DeleteButton from "../components/../buttons/DeleteButton";
+import Increment from "../components/../buttons/Increment";
+import Decrement from "../components/../buttons/Decrement";
 import Price from "./Price";
 export default function Cartdisplay({ CartItems, setCartItems }) {
   return (
